@@ -1,0 +1,36 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+Single-page static website for **CHASExcellence**, a nonprofit basketball scholarship organization founded in memory of Chase Culp #25 (Colorado Springs). There is no build system, package manager, framework, or test suite — just plain HTML, CSS, and vanilla JavaScript.
+
+## Hosting & Deployment
+
+- Hosted on **GitHub Pages**, served from the root of the `main` branch. Pushing to `main` deploys the live site automatically — there is no separate build or deploy step.
+- The custom domain is **chasexcellence25.org**, defined in the `CNAME` file. DNS is managed at **GoDaddy** (outside this repo). Do not delete, rename, or edit `CNAME` unless the domain itself is intentionally changing — GitHub Pages reads this file to bind the domain, and past commits show the domain has been broken before by editing it.
+- Spelling gotcha: the brand is written **CHASExcellence** (CHASE + xcellence, sharing the E), but the domain is `chasexcellence25.org`. Git history contains several commits fixing mix-ups between these spellings.
+
+## Local Development
+
+Open `index.html` directly in a browser, or serve locally:
+
+```bash
+python3 -m http.server 8000
+```
+
+There are no lint, build, or test commands.
+
+## Structure
+
+- `index.html` — all page content. A single page of anchor-linked sections in order: hero, about, values, scholarship, recipients, events, impact, donate, nominate, gallery, footer. Each `<section id="...">` corresponds to a nav link; adding or renaming a section means updating the nav in the `<header>` and the scroll-spy will pick it up automatically.
+- `style.css` — all styling. Design tokens (green/gold palette, radius, shadow) live in CSS variables at the top of the file under `:root`; use those variables rather than hard-coding colors. Sections alternate backgrounds via `section-dark` / `section-green-light` classes.
+- `script.js` — mobile nav toggle plus scroll-spy nav highlighting (an `IntersectionObserver` over `section[id]`).
+- `images/` — all photos and QR codes, committed directly to the repo.
+
+## Content Notes
+
+- The scholarship application is an external Microsoft Forms link; the coach nomination QR code is `images/nominate-qr.png` (the "Nominate a Player" button href is currently a `#` placeholder).
+- Donations go through Venmo (`@COEagles`), with QR code `images/venmo-qr.png`.
+- Fonts (Montserrat, Inter) load from Google Fonts; everything else is self-contained.
