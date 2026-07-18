@@ -3,13 +3,13 @@
    =========================== */
 
 :root {
-  --green-dark:   #1C453B;
-  --green-mid:    #2D6A4F;
-  --green-light:  #EAF2EE;
+  --green-dark:   #0A2F5C;
+  --green-mid:    #1C7ED6;
+  --green-light:  #E3F1FC;
   --gold:         #C9A84C;
   --gold-light:   #F5E6C0;
   --white:        #FFFFFF;
-  --off-white:    #F7F8F6;
+  --off-white:    #F3F8FD;
   --text-dark:    #1A1A1A;
   --text-mid:     #4B5563;
   --text-light:   #9CA3AF;
@@ -173,7 +173,7 @@ p:last-child { margin-bottom: 0; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(28,69,59,0.97);
+  background: rgba(10,47,92,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -218,7 +218,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   position: relative;
-  background: linear-gradient(135deg, var(--green-dark) 0%, #0d2b24 60%, #091f1a 100%);
+  background: linear-gradient(135deg, var(--green-dark) 0%, #072045 60%, #04122b 100%);
   padding-top: 68px;
   overflow: hidden;
 }
@@ -364,7 +364,7 @@ p:last-child { margin-bottom: 0; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #0d2b24;
+  background: #072045;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -717,7 +717,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---- Footer ---- */
 .footer {
-  background: #0d2b24;
+  background: #072045;
   color: rgba(255,255,255,0.7);
   padding-top: 4rem;
 }
