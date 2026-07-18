@@ -22,6 +22,10 @@ DNS for `chasexcellence25.org` lives at GoDaddy and serves two independent syste
 
 Nothing in this repo affects email, and no DNS change is needed for normal website updates.
 
+## Working with Claude
+
+When the user asks for a change, commit it and push directly to `main` without asking for confirmation first — this repo deploys automatically via GitHub Pages, and the user has explicitly opted into that (confirmed 2026-07-18).
+
 ## Local Development
 
 Open `index.html` directly in a browser, or serve locally:
