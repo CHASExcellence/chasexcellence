@@ -8,6 +8,7 @@ Single-page static website for **CHASExcellence**, a nonprofit basketball schola
 
 ## Hosting & Deployment
 
+- The repo lives in the **`chasexcellence` GitHub organization** (`github.com/chasexcellence/chasexcellence`), owned by the nonprofit.
 - Hosted on **GitHub Pages**, served from the root of the `main` branch. Pushing to `main` deploys the live site automatically — there is no separate build or deploy step.
 - The custom domain is **chasexcellence25.org**, defined in the `CNAME` file. DNS is managed at **GoDaddy** (outside this repo). Do not delete, rename, or edit `CNAME` unless the domain itself is intentionally changing — GitHub Pages reads this file to bind the domain, and past commits show the domain has been broken before by editing it.
 - Spelling gotcha: the brand is written **CHASExcellence** (CHASE + xcellence, sharing the E), but the domain is `chasexcellence25.org`. Git history contains several commits fixing mix-ups between these spellings.
@@ -16,7 +17,7 @@ Single-page static website for **CHASExcellence**, a nonprofit basketball schola
 
 DNS for `chasexcellence25.org` lives at GoDaddy and serves two independent systems — be careful not to break one while editing the other:
 
-- **Website (GitHub Pages):** four A records on the apex (`185.199.108.153` through `185.199.111.153`) and a `www` CNAME pointing to the owner's `github.io` domain. These must stay.
+- **Website (GitHub Pages):** four A records on the apex (`185.199.108.153` through `185.199.111.153`) and a `www` CNAME pointing to `chasexcellence.github.io`. These must stay.
 - **Email (Google Workspace):** organization email (`name@chasexcellence25.org`) is hosted on Google Workspace, set up July 2026. An MX record (`smtp.google.com`, priority 1) and a `google-site-verification` TXT record support it. Email is managed in the Google Admin Console, not in this repo or at GoDaddy beyond those DNS records.
 
 Nothing in this repo affects email, and no DNS change is needed for normal website updates.
