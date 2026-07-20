@@ -881,6 +881,14 @@ p:last-child { margin-bottom: 0; }
   font-size: 1rem;
   margin-bottom: 1.25rem;
 }
+.donate-tax {
+  font-size: 0.88rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(10,47,92,0.18);
+  max-width: 480px;
+}
+.donate-tax a { text-decoration: underline; font-weight: 700; }
 .donate-note {
   color: rgba(10,47,92,0.6);
   font-size: 0.8rem;
