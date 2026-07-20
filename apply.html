@@ -65,7 +65,9 @@
         </div>
       </div>
 
-      <form class="apply-card apply-form" id="applyForm" method="POST" action="#">
+      <form class="apply-card apply-form" id="applyForm" method="POST" action="https://formspree.io/f/mwvgbvga">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="hidden" name="_subject" id="subjectField" value="New Scholarship Application" />
         <p class="apply-required-note">All fields are required.</p>
 
         <div class="field-grid">
@@ -109,9 +111,18 @@
           <textarea id="essay" name="Values Essay" rows="8" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary apply-submit">Submit Application</button>
+        <button type="submit" class="btn btn-primary apply-submit" id="submitBtn">Submit Application</button>
         <p class="apply-privacy">Your submission is sent directly to CHASExcellence and used only for scholarship review.</p>
+        <p class="apply-error" id="applyError" hidden>Something went wrong sending your application. Please try again, or email us directly at <a href="mailto:admin@chasexcellence25.org">admin@chasexcellence25.org</a>.</p>
       </form>
+
+      <div class="apply-card apply-success" id="applySuccess" hidden>
+        <div class="apply-success-icon">&#127936;</div>
+        <h2>Application received &mdash; thank you!</h2>
+        <p>Your nomination has been submitted to CHASExcellence. We review every application with care and will reach out to the contact information you provided.</p>
+        <p class="apply-success-tag">Investing in Excellence &middot; Pain into Purpose</p>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
 
     </div>
   </main>
@@ -122,6 +133,41 @@
       &copy; 2025 CHASExcellence. All rights reserved. &middot; <a href="index.html">chasexcellence25.org</a>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('applyForm');
+      var btn = document.getElementById('submitBtn');
+      var errBox = document.getElementById('applyError');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errBox.hidden = true;
+        btn.disabled = true;
+        btn.textContent = 'Submitting…';
+        var player = form.querySelector('#playerName').value.trim();
+        document.getElementById('subjectField').value =
+          'New Scholarship Application — ' + (player || 'Unnamed player');
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.hidden = true;
+            var ok = document.getElementById('applySuccess');
+            ok.hidden = false;
+            ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error('bad status');
+          }
+        }).catch(function () {
+          errBox.hidden = false;
+          btn.disabled = false;
+          btn.textContent = 'Submit Application';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

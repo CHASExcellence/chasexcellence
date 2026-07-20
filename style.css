@@ -1305,6 +1305,29 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.85rem;
   margin-top: 1rem;
 }
+.apply-error {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  background: rgba(155, 28, 28, 0.12);
+  border: 1px solid rgba(155, 28, 28, 0.35);
+  color: #7c1d1d;
+  font-size: 0.95rem;
+  text-align: center;
+}
+.apply-error a { text-decoration: underline; font-weight: 700; }
+.apply-success { text-align: center; padding: 3rem 2.25rem; }
+.apply-success-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+.apply-success h2 { color: var(--navy); margin-bottom: 0.75rem; }
+.apply-success p { max-width: 520px; margin: 0 auto 1rem; }
+.apply-success-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(10,47,92,0.6);
+  margin-bottom: 1.5rem;
+}
 .apply-page .footer { padding-top: 0; }
 .apply-page .footer-bottom a { text-decoration: underline; }
 @media (max-width: 640px) {
