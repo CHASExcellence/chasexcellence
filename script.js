@@ -103,3 +103,54 @@ sections.forEach(s => observer.observe(s));
   }, { threshold: 0.6 });
   counters.forEach(function (c) { countObs.observe(c); });
 })();
+
+// ---- Gallery lightbox ----
+(function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item img'));
+  if (!items.length) return;
+
+  var box = document.createElement('div');
+  box.className = 'lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-label', 'Photo viewer');
+  box.innerHTML =
+    '<button class="lb-close" aria-label="Close">&times;</button>' +
+    '<button class="lb-prev" aria-label="Previous photo">&#10094;</button>' +
+    '<img class="lb-img" alt="" />' +
+    '<button class="lb-next" aria-label="Next photo">&#10095;</button>' +
+    '<div class="lb-count"></div>';
+  document.body.appendChild(box);
+
+  var lbImg = box.querySelector('.lb-img');
+  var lbCount = box.querySelector('.lb-count');
+  var idx = 0;
+
+  function show(i) {
+    idx = (i + items.length) % items.length;
+    lbImg.src = items[idx].src;
+    lbImg.alt = items[idx].alt || '';
+    lbCount.textContent = (idx + 1) + ' / ' + items.length;
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach(function (img, i) {
+    var tile = img.closest('.gallery-item');
+    tile.style.cursor = 'zoom-in';
+    tile.addEventListener('click', function () { show(i); });
+  });
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
