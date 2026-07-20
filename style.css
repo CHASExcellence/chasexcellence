@@ -1063,3 +1063,93 @@ p:last-child { margin-bottom: 0; }
     50%      { transform: translate(-50%, 8px); }
   }
 }
+
+/* ===========================================================
+   Tier-2 — photo grading, closing CTA, micro-interactions
+   =========================================================== */
+
+/* Photo grading: one gentle, consistent grade across all photos */
+.hero-photo img,
+.about-photo img,
+.gallery-item img {
+  filter: contrast(1.05) saturate(0.92) brightness(1.02);
+}
+/* Carolina wash over gallery tiles; lifts away on hover */
+.gallery-item { position: relative; }
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(75,156,211,0.10) 0%, rgba(10,47,92,0.22) 100%);
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.gallery-item:hover::after { opacity: 0; }
+
+/* Closing CTA band */
+.legacy-cta {
+  position: relative;
+  background:
+    linear-gradient(rgba(10,47,92,0.80), rgba(10,47,92,0.68)),
+    url("images/chase-25-court.jpg") center 28% / cover no-repeat;
+  padding: 7rem 0;
+  text-align: center;
+  color: var(--white);
+}
+.legacy-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.75rem;
+}
+.legacy-cta h2 {
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+.legacy-sub {
+  max-width: 560px;
+  margin: 0 auto 2.25rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.08rem;
+}
+.legacy-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-legacy-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.7);
+}
+.btn-legacy-outline:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Micro-interactions: cards lift on hover.
+   (.settled is added by JS after a reveal finishes, so hover
+   transitions don't fight the reveal animation.) */
+.impact-stat:not(.reveal), .value-card:not(.reveal), .recipient-card:not(.reveal),
+.event-card-featured:not(.reveal), .donate-card:not(.reveal), .scholarship-card:not(.reveal) {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reveal.settled { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+@media (hover: hover) {
+  .impact-stat:hover, .value-card:hover, .recipient-card:hover,
+  .event-card-featured:hover, .donate-card:hover, .scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(10,47,92,0.22);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .impact-stat:hover, .value-card:hover, .recipient-card:hover,
+  .event-card-featured:hover, .donate-card:hover, .scholarship-card:hover {
+    transform: none;
+  }
+}

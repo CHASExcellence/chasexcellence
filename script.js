@@ -40,7 +40,8 @@ sections.forEach(s => observer.observe(s));
     '.section-header', '.about-text', '.about-photo', '.quote-band .container',
     '.value-card', '.scholarship-card', '.recipient-card', '.impact-stat',
     '.event-card-featured', '.event-media-item', '.gallery-item',
-    '.donate-text', '.donate-card', '.nominate-text', '.nominate-qr'
+    '.donate-text', '.donate-card', '.nominate-text', '.nominate-qr',
+    '.legacy-inner'
   ].join(',');
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(revealSel));
   revealEls.forEach(function (el) {
@@ -54,8 +55,16 @@ sections.forEach(s => observer.observe(s));
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
-        e.target.classList.add('in');
-        revealObs.unobserve(e.target);
+        var el = e.target;
+        el.classList.add('in');
+        el.addEventListener('transitionend', function h(ev) {
+          if (ev.propertyName === 'transform') {
+            el.classList.add('settled');
+            el.style.transitionDelay = '';
+            el.removeEventListener('transitionend', h);
+          }
+        });
+        revealObs.unobserve(el);
       }
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
