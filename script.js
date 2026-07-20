@@ -50,7 +50,23 @@ sections.forEach(s => observer.observe(s));
       return c.classList.contains('reveal');
     });
     var i = sibs.indexOf(el);
-    if (i > 0) el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms';
+    if (el.classList.contains('gallery-item')) {
+      el.style.transitionDelay = (i % 3) * 90 + 'ms';
+    } else if (i > 0) {
+      el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms';
+    }
+  });
+
+  // Fade gallery photos in as they finish loading (lazy images
+  // otherwise pop in after the tile's reveal has already ended)
+  Array.prototype.forEach.call(document.querySelectorAll('.gallery-item img'), function (img) {
+    img.classList.add('img-fade');
+    if (img.complete && img.naturalWidth) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', function () { img.classList.add('loaded'); }, { once: true });
+      img.addEventListener('error', function () { img.classList.add('loaded'); }, { once: true });
+    }
   });
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

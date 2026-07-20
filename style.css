@@ -1085,6 +1085,9 @@ p:last-child { margin-bottom: 0; }
   transition: opacity 0.35s ease;
 }
 .gallery-item:hover::after { opacity: 0; }
+/* Photos fade in on load (.img-fade only added by JS when motion is allowed) */
+.gallery-item img.img-fade { opacity: 0; transition: opacity 0.65s ease; }
+.gallery-item img.img-fade.loaded { opacity: 1; }
 
 /* Closing CTA band */
 .legacy-cta {
