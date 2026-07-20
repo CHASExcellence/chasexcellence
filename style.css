@@ -199,11 +199,19 @@ p:last-child { margin-bottom: 0; }
   height: 68px;
 }
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
   font-size: 1.35rem;
   color: var(--white);
   letter-spacing: -0.01em;
+}
+.nav-badge {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
 }
 .nav-logo span { color: var(--gold); }
 .nav-links {
@@ -555,6 +563,19 @@ p:last-child { margin-bottom: 0; }
   line-height: 1;
   margin-bottom: 1rem;
 }
+.event-partner-chip {
+  display: inline-block;
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(10,47,92,0.25);
+}
+.event-partner-chip img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
 .event-partner {
   color: rgba(255,255,255,0.5);
   font-size: 0.8rem;
@@ -757,6 +778,11 @@ p:last-child { margin-bottom: 0; }
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+.footer-badge {
+  width: 84px;
+  height: auto;
+  margin-bottom: 1rem;
+}
 .footer-logo {
   font-family: 'Fredoka', sans-serif;
   font-size: 1.4rem;
@@ -867,6 +893,7 @@ p:last-child { margin-bottom: 0; }
 
 @media (max-width: 600px) {
   .nav-toggle { display: block; }
+  .nav-badge { width: 40px; }
   .nav-links {
     display: none;
     position: absolute;
@@ -1331,6 +1358,7 @@ p:last-child { margin-bottom: 0; }
 .apply-error a { text-decoration: underline; font-weight: 700; }
 .apply-success { text-align: center; padding: 3rem 2.25rem; }
 .apply-success-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+.apply-success-badge { width: 130px; height: auto; margin: 0 auto 1rem; }
 .apply-success h2 { color: var(--navy); margin-bottom: 0.75rem; }
 .apply-success p { max-width: 520px; margin: 0 auto 1rem; }
 .apply-success-tag {
