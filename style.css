@@ -906,7 +906,8 @@ p:last-child { margin-bottom: 0; }
   .gallery-wide { grid-column: span 2; }
   .event-content { grid-template-columns: 1fr; }
   .event-visual { display: none; }
-  .event-card-upcoming .event-visual {
+  .event-card-upcoming .event-visual,
+  .event-card-past .event-visual {
     display: block;
     text-align: center;
     margin-top: 1.5rem;
