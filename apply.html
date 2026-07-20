@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Application | CHASExcellence</title>
+  <meta name="description" content="Apply for the CHASExcellence Basketball Scholarship in memory of Chase Culp #25. To be completed by the player's coach." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="apply-page">
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">CHASE<span>xcellence</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">&larr; Back to Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="apply-main">
+    <div class="container apply-container">
+
+      <div class="apply-header">
+        <img src="images/logo-badge.png" alt="CHASExcellence logo" class="apply-badge" />
+        <span class="label label-light">Scholarship</span>
+        <h1>Basketball Scholarship Application</h1>
+        <p class="apply-memory">In Loving Memory of Chase Culp #25 &middot; Dec 21, 2011 &ndash; Aug 30, 2024</p>
+        <p class="apply-note-top">For basketball players age 17 &amp; under &mdash; to be completed by a team coach.</p>
+      </div>
+
+      <div class="apply-card apply-about">
+        <p>
+          Established in memory of Chase Culp, who tragically passed on August 30, 2024.
+          The CHASExcellence Scholarship honors a player who lives out the core values of our
+          program in pursuit of excellence &mdash; just as Chase did. At just 12 years old, Chase was
+          more than an Eagles basketball player &mdash; he was a beloved teammate, a loyal friend, and a
+          joyful spirit who brought heart and hustle to everything he did. His smile lit up the court,
+          and his kindness touched everyone lucky enough to know him.
+        </p>
+        <p><strong>We recognize athletes who embody:</strong></p>
+        <ul class="apply-values">
+          <li><strong>Toughness</strong> &mdash; physically and mentally</li>
+          <li><strong>Composure</strong> &mdash; positive body language</li>
+          <li><strong>Unified</strong> &mdash; family mind-set, high fives, picking guys up off the floor</li>
+          <li><strong>Dedication</strong> &mdash; choosing extra work</li>
+        </ul>
+        <p>This award helps cover club team costs and gear for deserving players who represent these values.</p>
+        <div class="apply-rules">
+          <p><strong>&#9989; Eligibility &amp; Rules</strong></p>
+          <ul>
+            <li>Club basketball player, age 17 or under</li>
+            <li>Submission must be made by the player&rsquo;s coach/coaching staff</li>
+            <li>Scholarship will be paid to the head coach or administrator of the club team</li>
+            <li>Parents will be notified of the scholarship amount</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="apply-card apply-form" id="applyForm" method="POST" action="#">
+        <p class="apply-required-note">All fields are required.</p>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="playerName">1. Player Name</label>
+            <input type="text" id="playerName" name="Player Name" autocomplete="off" required />
+          </div>
+          <div class="field">
+            <label for="dob">2. Date of Birth</label>
+            <input type="text" id="dob" name="Date of Birth" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" title="MM/DD/YYYY" required />
+          </div>
+          <div class="field">
+            <label for="parentName">3. Parent/Guardian Name</label>
+            <input type="text" id="parentName" name="Parent/Guardian Name" autocomplete="off" required />
+          </div>
+          <div class="field">
+            <label for="parentPhone">4. Parent/Guardian Phone Number</label>
+            <input type="tel" id="parentPhone" name="Parent/Guardian Phone" autocomplete="off" required />
+          </div>
+          <div class="field">
+            <label for="parentEmail">5. Parent/Guardian Email</label>
+            <input type="email" id="parentEmail" name="Parent/Guardian Email" autocomplete="off" required />
+          </div>
+          <div class="field">
+            <label for="clubTeam">6. Current Club Team</label>
+            <input type="text" id="clubTeam" name="Current Club Team" required />
+          </div>
+          <div class="field">
+            <label for="coachName">7. Coach&rsquo;s Name</label>
+            <input type="text" id="coachName" name="Coach Name" autocomplete="off" required />
+          </div>
+          <div class="field">
+            <label for="coachContact">8. Coach&rsquo;s Contact Information</label>
+            <input type="text" id="coachContact" name="Coach Contact" placeholder="Phone or email" autocomplete="off" required />
+          </div>
+        </div>
+
+        <div class="field field-full">
+          <label for="essay">9. How does your player live out Toughness, Composure, Unified, and Dedication in their basketball journey? What does CHASExcellence mean to them?</label>
+          <p class="field-hint">Please provide a short but thoughtful response with specific examples. (To be completed by coach/coaching staff)</p>
+          <textarea id="essay" name="Values Essay" rows="8" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary apply-submit">Submit Application</button>
+        <p class="apply-privacy">Your submission is sent directly to CHASExcellence and used only for scholarship review.</p>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      &copy; 2025 CHASExcellence. All rights reserved. &middot; <a href="index.html">chasexcellence25.org</a>
+    </div>
+  </footer>
+
+</body>
+</html>
