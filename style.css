@@ -201,7 +201,6 @@ p:last-child { margin-bottom: 0; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
   font-size: 1.35rem;
@@ -212,6 +211,7 @@ p:last-child { margin-bottom: 0; }
   width: 48px;
   height: auto;
   flex-shrink: 0;
+  margin-right: 0.6rem;
 }
 .nav-logo span { color: var(--gold); }
 .nav-links {
