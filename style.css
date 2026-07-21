@@ -107,6 +107,10 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.05rem;
 }
 .section-dark .section-sub { color: rgba(255,255,255,0.7); }
+.value-highlight {
+  font-weight: 700;
+  color: var(--navy);
+}
 
 /* ---- Buttons ---- */
 .btn {
