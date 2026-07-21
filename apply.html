@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scholarship Application | CHASExcellence</title>
-  <meta name="description" content="Apply for the CHASExcellence Basketball Scholarship in memory of Chase Culp #25. To be completed by the player's coach." />
+  <meta name="description" content="Apply for the CHASExcellence Scholarship in memory of Chase Culp #25. Open to young athletes in any sport." />
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png" />
@@ -32,15 +32,15 @@
       <div class="apply-header">
         <img src="images/logo-badge.png" alt="CHASExcellence logo" class="apply-badge" />
         <span class="label label-light">Scholarship</span>
-        <h1>Basketball Scholarship Application</h1>
+        <h1>Scholarship Application</h1>
         <p class="apply-memory">In Loving Memory of Chase Culp #25 &middot; Dec 21, 2011 &ndash; Aug 30, 2024</p>
-        <p class="apply-note-top">For basketball players age 17 &amp; under &mdash; to be completed by a team coach.</p>
+        <p class="apply-note-top">For young athletes age 17 &amp; under, in any sport &mdash; may be completed by the athlete or a team coach.</p>
       </div>
 
       <div class="apply-card apply-about">
         <p>
           Established in memory of Chase Culp, who tragically passed on August 30, 2024.
-          The CHASExcellence Scholarship honors a player who lives out the core values of our
+          The CHASExcellence Scholarship honors an athlete who lives out the core values of our
           program in pursuit of excellence &mdash; just as Chase did. At just 12 years old, Chase was
           more than an Eagles basketball player &mdash; he was a beloved teammate, a loyal friend, and a
           joyful spirit who brought heart and hustle to everything he did. His smile lit up the court,
@@ -53,13 +53,13 @@
           <li><strong>Unified</strong> &mdash; family mind-set, high fives, picking guys up off the floor</li>
           <li><strong>Dedication</strong> &mdash; choosing extra work</li>
         </ul>
-        <p>This award helps cover club team costs and gear for deserving players who represent these values.</p>
+        <p>This award helps cover team costs and gear for deserving athletes who represent these values.</p>
         <div class="apply-rules">
           <p><strong>&#9989; Eligibility &amp; Rules</strong></p>
           <ul>
-            <li>Club basketball player, age 17 or under</li>
-            <li>Submission must be made by the player&rsquo;s coach/coaching staff</li>
-            <li>Scholarship will be paid to the head coach or administrator of the club team</li>
+            <li>Young athlete, age 17 or under, in any sport</li>
+            <li>May be submitted by the athlete or their coach/coaching staff</li>
+            <li>Scholarship will be paid to the head coach or administrator of the team</li>
             <li>Parents will be notified of the scholarship amount</li>
           </ul>
         </div>
@@ -72,8 +72,8 @@
 
         <div class="field-grid">
           <div class="field">
-            <label for="playerName">1. Player Name</label>
-            <input type="text" id="playerName" name="Player Name" autocomplete="off" required />
+            <label for="playerName">1. Athlete Name</label>
+            <input type="text" id="playerName" name="Athlete Name" autocomplete="off" required />
           </div>
           <div class="field">
             <label for="dob">2. Date of Birth</label>
@@ -92,8 +92,8 @@
             <input type="email" id="parentEmail" name="Parent/Guardian Email" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="clubTeam">6. Current Club Team</label>
-            <input type="text" id="clubTeam" name="Current Club Team" required />
+            <label for="clubTeam">6. Current Team &amp; Sport</label>
+            <input type="text" id="clubTeam" name="Current Team &amp; Sport" placeholder="Team name and sport" required />
           </div>
           <div class="field">
             <label for="coachName">7. Coach&rsquo;s Name</label>
@@ -106,8 +106,8 @@
         </div>
 
         <div class="field field-full">
-          <label for="essay">9. How does your player live out Toughness, Composure, Unified, and Dedication in their basketball journey? What does CHASExcellence mean to them?</label>
-          <p class="field-hint">Please provide a short but thoughtful response with specific examples. (To be completed by coach/coaching staff)</p>
+          <label for="essay">9. How does this athlete live out Toughness, Composure, Unity, and Dedication in their athletic journey? What does CHASExcellence mean to them?</label>
+          <p class="field-hint">Please provide a short but thoughtful response with specific examples.</p>
           <textarea id="essay" name="Values Essay" rows="8" required></textarea>
         </div>
 
@@ -147,7 +147,7 @@
         btn.textContent = 'Submitting…';
         var player = form.querySelector('#playerName').value.trim();
         document.getElementById('subjectField').value =
-          'New Scholarship Application — ' + (player || 'Unnamed player');
+          'New Scholarship Application — ' + (player || 'Unnamed athlete');
         fetch(form.action, {
           method: 'POST',
           body: new FormData(form),
