@@ -364,8 +364,12 @@ p:last-child { margin-bottom: 0; }
   color: rgba(10,47,92,0.72);
 }
 
-/* Obituary + In the News block after Our Story */
-.about-remembrance { margin-top: 2.5rem; padding-top: 2.5rem; }
+/* Obituary + In the News block */
+.about-remembrance {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(10,47,92,0.15);
+}
 .remembrance-group { margin-bottom: 1.75rem; }
 .remembrance-group:last-child { margin-bottom: 0; }
 .about-remembrance .about-news-label { margin-top: 0; }
