@@ -487,6 +487,10 @@ p:last-child { margin-bottom: 0; }
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.card-icon-sports {
+  font-size: 1.7rem;
+  letter-spacing: 0.15rem;
+}
 .scholarship-card p { color: var(--text-mid); font-size: 0.95rem; }
 .scholarship-cta {
   text-align: center;
