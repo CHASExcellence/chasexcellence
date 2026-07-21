@@ -495,8 +495,15 @@ p:last-child { margin-bottom: 0; }
 .scholarship-cta {
   text-align: center;
 }
+#values { scroll-margin-top: 88px; }
+.scholarship-midhead {
+  text-align: center;
+  color: var(--navy);
+  font-size: 1.5rem;
+  margin: 3.5rem 0 2rem;
+}
 .cta-note {
-  color: var(--text-light);
+  color: rgba(10,47,92,0.7);
   font-size: 0.85rem;
   margin-top: 0.75rem;
 }
