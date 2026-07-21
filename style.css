@@ -351,6 +351,19 @@ p:last-child { margin-bottom: 0; }
 .about-story h2 { margin-bottom: 1.25rem; }
 .about-story p { margin-bottom: 1.1rem; }
 .about-story p:last-child { margin-bottom: 0; }
+/* Gallery tribute intro */
+.gallery-intro {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+.gallery-intro p { margin-bottom: 1.1rem; }
+.gallery-glimpse {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-style: italic;
+  color: rgba(10,47,92,0.72);
+}
+
 /* Obituary + In the News block after Our Story */
 .about-remembrance { margin-top: 2.5rem; padding-top: 2.5rem; }
 .remembrance-group { margin-bottom: 1.75rem; }
