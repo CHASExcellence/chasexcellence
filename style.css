@@ -732,39 +732,53 @@ p:last-child { margin-bottom: 0; }
   border: none;
 }
 .facebook-reel-card {
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 30%;
+  background-color: #000;
+  transition: transform var(--transition);
+}
+.facebook-reel-card:hover { transform: scale(1.015); }
+.fb-reel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0) 100%);
+}
+.fb-reel-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  color: var(--white);
-  transition: background var(--transition);
-  height: calc(100% - 1.75rem);
-}
-.facebook-reel-card:hover {
-  background: rgba(255,255,255,0.1);
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
 }
 .fb-reel-icon {
   color: #1877F2;
   flex-shrink: 0;
+  display: flex;
 }
-.fb-reel-text { flex: 1; }
+.fb-reel-text { flex: 1; min-width: 0; }
 .fb-reel-title {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: var(--white);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 .fb-reel-sub {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.55);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.75);
   margin: 0;
 }
 .fb-reel-arrow {
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.75);
   font-size: 1.25rem;
   flex-shrink: 0;
 }
