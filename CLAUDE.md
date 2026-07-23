@@ -47,5 +47,5 @@ There are no lint, build, or test commands.
 
 - The scholarship application lives on-site at `apply.html` (coach-submitted nomination form). It POSTs to Formspree (endpoint in the file; account login is admin@chasexcellence25.org, free tier 50/month). "Nominate a Player" and "Apply for Scholarship" both lead there — they are the same flow. An old unlisted Microsoft Form still exists as a backup.
 - `images/nominate-qr.png` is a QR code encoding `https://chasexcellence25.org/apply.html` (regenerate with `qrcode` in Python if the URL changes).
-- Donations go through Venmo (`@COEagles`), with QR code `images/venmo-qr.png`.
+- Donations go through Venmo (`@CHASExcellence`), with QR code `images/venmo-qr.png`.
 - Fonts (Fredoka for headings, Nunito for body) load from Google Fonts; everything else is self-contained.
