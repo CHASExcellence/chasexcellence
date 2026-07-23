@@ -184,6 +184,27 @@ p:last-child { margin-bottom: 0; }
   height: 20px;
   flex-shrink: 0;
 }
+.btn-cashapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #000000;
+  color: var(--white);
+  border-color: #000000;
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
+}
+.btn-cashapp:hover {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  transform: translateY(-1px);
+}
+.cashapp-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #00D632;
+}
 
 /* ---- Nav ---- */
 .nav {
@@ -913,6 +934,12 @@ p:last-child { margin-bottom: 0; }
   grid-template-columns: 1fr auto;
   gap: 4rem;
   align-items: center;
+}
+.donate-payment-methods {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .donate-text h2 { margin-top: 0.5rem; }
 .donate-text p { color: rgba(255,255,255,0.75); }
