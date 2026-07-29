@@ -61,3 +61,4 @@ There are no lint, build, or test commands.
 - Social links live in the footer's "Social Media" column: Facebook (`facebook.com/profile.php?id=61591746670881`) and Instagram (`@chasexcellence25_`).
 - Footer/Donate section also disclose 501(c)(3) status and EIN 42-1909009 for donor tax-deductibility.
 - Fonts (Fredoka for headings, Nunito for body) load from Google Fonts; everything else is self-contained.
+- The Events section (`#events`) lists upcoming events newest-listed-first regardless of date order (currently: The CHASExcellence Foundation Kickoff, Aug 30, 2026, listed above the 3v3 Tournament, Aug 22, 2026 — the Kickoff is intentionally featured first). Event cards without a flyer/visual image use `.event-content-single` (single-column) instead of the default two-column `.event-content` grid.

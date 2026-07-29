@@ -595,6 +595,7 @@ p:last-child { margin-bottom: 0; }
   gap: 3rem;
   align-items: center;
 }
+.event-content-single { grid-template-columns: 1fr; }
 .event-date {
   font-size: 0.9rem;
   font-weight: 600;
