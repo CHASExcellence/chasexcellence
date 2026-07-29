@@ -164,47 +164,6 @@ p:last-child { margin-bottom: 0; }
   background: rgba(255,255,255,0.1);
   border-color: var(--white);
 }
-.btn-venmo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #008CFF;
-  color: var(--white);
-  border-color: #008CFF;
-  font-size: 1.1rem;
-  padding: 0.9rem 2rem;
-}
-.btn-venmo:hover {
-  background: #0077d9;
-  border-color: #0077d9;
-  transform: translateY(-1px);
-}
-.venmo-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-.btn-cashapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #000000;
-  color: var(--white);
-  border-color: #000000;
-  font-size: 1.1rem;
-  padding: 0.9rem 2rem;
-}
-.btn-cashapp:hover {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
-  transform: translateY(-1px);
-}
-.cashapp-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  color: #00D632;
-}
 
 /* ---- Nav ---- */
 .nav {

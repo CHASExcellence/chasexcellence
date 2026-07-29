@@ -57,7 +57,7 @@ There are no lint, build, or test commands.
 
 - The scholarship application lives on-site at `apply.html`, open to **any sport** (not just basketball) — may be submitted by the athlete directly or by a coach on their behalf. It POSTs to Formspree (endpoint in the file; Formspree account login is **admin@chasexcellence25.org**, free tier 50 submissions/month). "Nominate a Player" and "Apply for Scholarship" both lead there — they are the same flow. An old unlisted Microsoft Form still exists as a backup.
 - `images/nominate-qr.png` encodes `https://chasexcellence25.org/apply.html`.
-- Donations: **Venmo** `@CHASExcellence` (`images/venmo-qr.png`) and **Cash App** `$CHASExcellence25` (`images/cashapp-qr.png`), shown side by side in the Donate section.
+- Donations go through **Givebutter** (`givebutter.com/CHASExcellence-Kickoff-Fundraiser`) — one card in the Donate section with a button and QR code (`images/kickoff-givebutter-qr.png`, shared with the Kickoff event card below). Venmo and Cash App were removed July 2026; `images/venmo-qr.png` and `images/cashapp-qr.png` are unused leftovers, not deleted from the repo.
 - Social links live in the footer's "Social Media" column: Facebook (`facebook.com/profile.php?id=61591746670881`) and Instagram (`@chasexcellence25_`).
 - Footer/Donate section also disclose 501(c)(3) status and EIN 42-1909009 for donor tax-deductibility.
 - Fonts (Fredoka for headings, Nunito for body) load from Google Fonts; everything else is self-contained.
