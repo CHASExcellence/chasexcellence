@@ -135,6 +135,17 @@ p:last-child { margin-bottom: 0; }
   border-color: #E4ECF3;
   transform: translateY(-1px);
 }
+.btn-givebutter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.givebutter-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
 .btn-outline {
   background: transparent;
   color: var(--carolina);
