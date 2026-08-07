@@ -62,6 +62,7 @@ There are no lint, build, or test commands.
   - **Kickoff event tickets/donations** (the Kickoff event card's "Buy Tickets / Donate" button only): `givebutter.com/CHASExcellence-Kickoff-Fundraiser`. Keep these two links distinct — the Kickoff card must not be pointed at the general campaign or vice versa.
   - Both buttons use `images/givebutter-icon.png` (their official mascot icon) via the shared `.btn-givebutter` class.
   - Venmo and Cash App were removed July 2026; `images/venmo-qr.png` and `images/cashapp-qr.png` are unused leftovers, not deleted from the repo.
+- **Merch link** in the header nav: `https://colosports.chipply.com/CHASExcllence25/?action=viewall` (opens in new tab). Chipply storefront for CHASExcellence merchandise.
 - Social links live in the footer's "Social Media" column: Facebook (`facebook.com/profile.php?id=61591746670881`) and Instagram (`@chasexcellence25_`).
 - Footer/Donate section also disclose 501(c)(3) status and EIN 42-1909009 for donor tax-deductibility.
 - Fonts (Fredoka for headings, Nunito for body) load from Google Fonts; everything else is self-contained.
