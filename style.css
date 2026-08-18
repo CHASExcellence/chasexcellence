@@ -814,12 +814,13 @@ p:last-child { margin-bottom: 0; }
 }
 .sponsor-card:hover { transform: translateY(-4px); }
 .sponsor-card-dpors { padding: 0.35rem; }
-.sponsor-card-tiffany { padding: 0.4rem; }
-.sponsor-card-revival {
-  height: 175px;
-  grid-column: span 2;
-}
-.sponsor-card-revival img { max-width: 72%; }
+/* Very wide (~6.5:1) wordmark, so a single column caps it far too small.
+   Spans 2 with a width cap to lift it without letting it dominate. */
+.sponsor-card-tiffany { grid-column: span 2; }
+.sponsor-card-tiffany img { max-width: 68%; }
+/* Spans 2 columns so its wide 2:1 mark can reach the same height as the
+   Chicken Coop / DPORS logos; height comes from the default card. */
+.sponsor-card-revival { grid-column: span 2; }
 .sponsor-card img {
   max-width: 100%;
   max-height: 100%;
