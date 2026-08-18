@@ -814,14 +814,6 @@ p:last-child { margin-bottom: 0; }
 }
 .sponsor-card:hover { transform: translateY(-4px); }
 .sponsor-card-dpors { padding: 0.35rem; }
-/* Dark navy wordmark on transparent — needs a white backing to read against
-   the Carolina Blue section (same treatment it gets on the Kickoff flyer).
-   The extra inline padding also keeps the tightly-cropped "C" off the edge. */
-.sponsor-card-speard {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 1rem 1.35rem;
-}
 /* Very wide (~6.5:1) wordmark, so a single column caps it far too small.
    Spans 2 with a width cap to lift it without letting it dominate. */
 .sponsor-card-tiffany { grid-column: span 2; }
