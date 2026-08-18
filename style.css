@@ -817,7 +817,6 @@ p:last-child { margin-bottom: 0; }
 /* Very wide (~6.5:1) wordmark, so a single column caps it far too small.
    Spans 2 with a width cap to lift it without letting it dominate. */
 .sponsor-card-tiffany { grid-column: span 2; }
-.sponsor-card-tiffany img { max-width: 68%; }
 /* Spans 2 columns so its wide 2:1 mark can reach the same height as the
    Chicken Coop / DPORS logos; height comes from the default card. */
 .sponsor-card-revival { grid-column: span 2; }
@@ -827,6 +826,8 @@ p:last-child { margin-bottom: 0; }
   object-fit: contain;
   border-radius: 8px;
 }
+/* Must come after `.sponsor-card img` — same specificity, so source order decides. */
+.sponsor-card-tiffany img { max-width: 62%; }
 .impact-stat {
   background: var(--white);
   border: 1px solid var(--border);
