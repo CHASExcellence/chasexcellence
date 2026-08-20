@@ -832,6 +832,7 @@ p:last-child { margin-bottom: 0; }
 }
 /* Must come after `.sponsor-card img` — same specificity, so source order decides. */
 .sponsor-card-tiffany img { max-width: 62%; }
+.sponsor-card-lux img { max-width: 88%; }
 .impact-stat {
   background: var(--white);
   border: 1px solid var(--border);
