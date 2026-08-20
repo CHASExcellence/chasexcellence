@@ -801,7 +801,9 @@ p:last-child { margin-bottom: 0; }
 }
 .sponsors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  /* 150px (not 160) so a 6th column fits at desktop width — that lets row 1
+     hold Coop + DPORS + Revival(2) + Lux(2) exactly, with no trailing hole. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 .sponsor-card {
@@ -820,6 +822,8 @@ p:last-child { margin-bottom: 0; }
 /* Spans 2 columns so its wide 2:1 mark can reach the same height as the
    Chicken Coop / DPORS logos; height comes from the default card. */
 .sponsor-card-revival { grid-column: span 2; }
+/* ~2.6:1 card — width-constrained in a single column, so it spans 2 to grow. */
+.sponsor-card-lux { grid-column: span 2; }
 .sponsor-card img {
   max-width: 100%;
   max-height: 100%;
