@@ -759,6 +759,13 @@ p:last-child { margin-bottom: 0; }
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0) 100%);
 }
+/* Busy/light backgrounds (e.g. a white banner with QR codes) need a much
+   harder, tighter-to-the-bottom band than the default gradient to fully
+   hide detail behind the text row — the default's 82%/mid-fade isn't
+   enough against near-white. */
+.fb-reel-overlay-strong {
+  background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.97) 14%, rgba(0,0,0,0) 45%);
+}
 .fb-reel-row {
   position: absolute;
   left: 0;
@@ -781,11 +788,17 @@ p:last-child { margin-bottom: 0; }
   font-size: 1rem;
   color: var(--white);
   margin-bottom: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fb-reel-sub {
   font-size: 0.82rem;
   color: rgba(255,255,255,0.75);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fb-reel-arrow {
   color: rgba(255,255,255,0.75);
@@ -1306,6 +1319,11 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 600px) {
   .section { padding: 4.5rem 0; }
   .section-header { margin-bottom: 2.5rem; }
+  /* The card is only ~140px tall here; icon + two text lines + padding
+     otherwise eats over half of it and crowds the background photo. */
+  .fb-reel-sub { display: none; }
+  .fb-reel-row { padding: 0.7rem 0.9rem; gap: 0.6rem; }
+  .fb-reel-icon svg { width: 24px; height: 24px; }
 }
 
 /* Lightbox */
