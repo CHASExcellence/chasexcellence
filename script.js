@@ -1,3 +1,12 @@
+// Hide the header "Raffle" button once the raffle ends (Aug 31, 2026)
+(function () {
+  var raffleEnds = new Date(2026, 7, 31, 23, 59, 59); // month is 0-indexed: 7 = August
+  if (new Date() > raffleEnds) {
+    var raffleBtn = document.getElementById('navRaffle');
+    if (raffleBtn) raffleBtn.remove();
+  }
+})();
+
 // Mobile nav toggle
 function toggleMenu() {
   const links = document.getElementById('navLinks');
