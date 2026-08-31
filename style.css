@@ -743,11 +743,18 @@ p:last-child { margin-bottom: 0; }
 }
 /* For a portrait/vertical source video (e.g. 1080x1920) — the default
    16:9 .video-wrapper would pillarbox it into a small strip with big
-   black bars on either side. */
+   black bars on either side. Sized by HEIGHT (not width, like the
+   padding-bottom trick above) so it lands close to its sibling
+   .event-media-item's height instead of towering over it — at full
+   column width, 9:16 would render 3x taller than a 16:9 card. */
 .video-wrapper-vertical {
-  padding-bottom: 177.78%;
-  max-width: 420px;
+  padding-bottom: 0;
+  aspect-ratio: 9 / 16;
+  height: 360px;
+  width: auto;
+  max-width: 100%;
   margin: 0 auto;
+  justify-self: center;
 }
 .facebook-reel-card {
   display: block;
@@ -1332,6 +1339,10 @@ p:last-child { margin-bottom: 0; }
   .fb-reel-sub { display: none; }
   .fb-reel-row { padding: 0.7rem 0.9rem; gap: 0.6rem; }
   .fb-reel-icon svg { width: 24px; height: 24px; }
+  /* .event-media collapses to one column here, so its sibling reel card
+     shrinks with the narrower column while this fixed-height vertical
+     video wouldn't — rescale it down to match. */
+  .video-wrapper-vertical { height: 260px; }
 }
 
 /* Lightbox */
