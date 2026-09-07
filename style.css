@@ -824,7 +824,9 @@ p:last-child { margin-bottom: 0; }
 /* ---- Impact Stats ---- */
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* 3 columns, not 4: there are 6 stats, so 3 gives two full rows with no
+     trailing hole. Re-check this if a stat is ever added or removed. */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .sponsors-grid {
@@ -1047,7 +1049,7 @@ p:last-child { margin-bottom: 0; }
   .hero-tagline { margin-left: auto; margin-right: auto; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .scholarship-grid { grid-template-columns: 1fr 1fr; }
-  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-photo { order: -1; }
   .about-photo img { height: 320px; }
@@ -1100,7 +1102,12 @@ p:last-child { margin-bottom: 0; }
   .hero-photo img { height: 300px; }
   .values-grid { grid-template-columns: 1fr 1fr; }
   .scholarship-grid { grid-template-columns: 1fr; }
-  .impact-grid { grid-template-columns: 1fr 1fr; }
+  /* minmax(0,1fr) keeps the two columns equal — a plain 1fr has a min-content
+     floor, so the widest number ($14,000+) stretched its column and left the
+     cards visibly mismatched. The smaller stat size keeps that number on one line. */
+  .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-stat { padding: 1.5rem 0.75rem; }
+  .stat-number { font-size: 1.75rem; }
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; }
   .gallery-wide { grid-column: span 1; }
   .footer-inner { grid-template-columns: 1fr; }
