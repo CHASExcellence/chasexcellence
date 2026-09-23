@@ -68,7 +68,7 @@
       <form class="apply-card apply-form" id="applyForm" method="POST" action="https://formspree.io/f/mwvgbvga">
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="hidden" name="_subject" id="subjectField" value="New Scholarship Application" />
-        <p class="apply-required-note">All fields are required.</p>
+        <p class="apply-required-note">All fields are required except where noted.</p>
 
         <div class="field-grid">
           <div class="field">
@@ -100,17 +100,21 @@
             <input type="text" id="clubTeam" name="Current Team &amp; Sport" placeholder="Team name and sport" required />
           </div>
           <div class="field">
-            <label for="coachName">8. Coach&rsquo;s Name</label>
+            <label for="teamWeb">8. Team Website or Social Media Page <span class="field-optional">(optional)</span></label>
+            <input type="text" id="teamWeb" name="Team Website or Social Media" placeholder="e.g. league page, team Facebook/Instagram" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="coachName">9. Coach&rsquo;s Name</label>
             <input type="text" id="coachName" name="Coach Name" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="coachContact">9. Coach&rsquo;s Contact Information</label>
+            <label for="coachContact">10. Coach&rsquo;s Contact Information</label>
             <input type="text" id="coachContact" name="Coach Contact" placeholder="Phone or email" autocomplete="off" required />
           </div>
         </div>
 
         <div class="field field-full">
-          <label for="essay">10. How does this athlete live out Toughness, Composure, Unity, and Dedication in their athletic journey? What does CHASExcellence mean to them?</label>
+          <label for="essay">11. How does this athlete live out Toughness, Composure, Unity, and Dedication in their athletic journey? What does CHASExcellence mean to them?</label>
           <p class="field-hint">Please provide a short but thoughtful response with specific examples.</p>
           <textarea id="essay" name="Values Essay" rows="8" required></textarea>
         </div>
