@@ -70,51 +70,69 @@
         <input type="hidden" name="_subject" id="subjectField" value="New Scholarship Application" />
         <p class="apply-required-note">All fields are required except where noted.</p>
 
+        <div class="field field-full">
+          <label>1. This application is being submitted by:</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="Submitted By" value="Athlete" required />
+              <span>Athlete</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="Submitted By" value="Parent / Guardian" required />
+              <span>Parent / Guardian</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="Submitted By" value="Coach (on the athlete's behalf)" required />
+              <span>Coach (on the athlete&rsquo;s behalf)</span>
+            </label>
+          </div>
+        </div>
+
         <div class="field-grid">
           <div class="field">
-            <label for="playerName">1. Athlete Name</label>
+            <label for="playerName">2. Athlete Name</label>
             <input type="text" id="playerName" name="Athlete Name" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="dob">2. Date of Birth</label>
+            <label for="dob">3. Date of Birth</label>
             <input type="text" id="dob" name="Date of Birth" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" title="MM/DD/YYYY" required />
           </div>
           <div class="field">
-            <label for="parentName">3. Parent/Guardian Name</label>
+            <label for="parentName">4. Parent/Guardian Name</label>
             <input type="text" id="parentName" name="Parent/Guardian Name" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="parentPhone">4. Parent/Guardian Phone Number</label>
+            <label for="parentPhone">5. Parent/Guardian Phone Number</label>
             <input type="tel" id="parentPhone" name="Parent/Guardian Phone" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="parentEmail">5. Parent/Guardian Email</label>
+            <label for="parentEmail">6. Parent/Guardian Email</label>
             <input type="email" id="parentEmail" name="Parent/Guardian Email" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="athleteCity">6. Athlete&rsquo;s City &amp; Zip Code</label>
+            <label for="athleteCity">7. Athlete&rsquo;s City &amp; Zip Code</label>
             <input type="text" id="athleteCity" name="Athlete City & Zip" placeholder="e.g. Colorado Springs, 80908" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="clubTeam">7. Current Team &amp; Sport</label>
+            <label for="clubTeam">8. Current Team &amp; Sport</label>
             <input type="text" id="clubTeam" name="Current Team &amp; Sport" placeholder="Team name and sport" required />
           </div>
           <div class="field">
-            <label for="teamWeb">8. Team Website or Social Media Page <span class="field-optional">(optional)</span></label>
+            <label for="teamWeb">9. Team Website or Social Media Page <span class="field-optional">(optional)</span></label>
             <input type="text" id="teamWeb" name="Team Website or Social Media" placeholder="e.g. league page, team Facebook/Instagram" autocomplete="off" />
           </div>
           <div class="field">
-            <label for="coachName">9. Coach&rsquo;s Name</label>
+            <label for="coachName">10. Coach&rsquo;s Name</label>
             <input type="text" id="coachName" name="Coach Name" autocomplete="off" required />
           </div>
           <div class="field">
-            <label for="coachContact">10. Coach&rsquo;s Contact Information</label>
+            <label for="coachContact">11. Coach&rsquo;s Contact Information</label>
             <input type="text" id="coachContact" name="Coach Contact" placeholder="Phone or email" autocomplete="off" required />
           </div>
         </div>
 
         <div class="field field-full">
-          <label for="essay">11. How does this athlete live out Toughness, Composure, Unity, and Dedication in their athletic journey? What does CHASExcellence mean to them?</label>
+          <label for="essay">12. How does this athlete live out Toughness, Composure, Unity, and Dedication in their athletic journey? What does CHASExcellence mean to them?</label>
           <p class="field-hint">Please provide a short but thoughtful response with specific examples.</p>
           <textarea id="essay" name="Values Essay" rows="8" required></textarea>
         </div>
